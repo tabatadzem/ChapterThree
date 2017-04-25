@@ -68,22 +68,41 @@ public class Main {
 //            System.out.println("D");
 //        else
 //            System.out.println("F");
+//
+//        Scanner input = new Scanner(System.in);
+//        int number1 = (int) (Math.random()*10 +40);
+//        int number2 = (int) (Math.random()*10+10);
+//        if (number1 < number2){
+//            int temp;
+//            temp =number1;
+//            number1 = number2;
+//            number2 = temp;
+//        }
+//        System.out.println("pease enter the answer for " + number1 + " - " + number2);
+//        int answer= input.nextInt();
+//        if(number1 - number2 == answer)
+//            System.out.println("you are right");
+//        else System.out.println("you are wrong");
 
         Scanner input = new Scanner(System.in);
-        int number1 = (int) (Math.random()*100);
-        int number2 = (int) (Math.random()*100);
-        if (number1 < number2){
-            int temp;
-            temp =number1;
-            number1 = number2;
-            number2 = temp;
+        System.out.print("please enter the weight");
+        double weightInPounds = input.nextDouble();
+        System.out.print("please enter the height");
+        double heightInInches = input.nextDouble();
+        final double KILOGRAMS_PER_POUND = 0.45359237;
+        final double METERS_PER_INCH = 0.0254;
+        double weightInKilograms = weightInPounds * KILOGRAMS_PER_POUND;
+        double heightInMeters = heightInInches * METERS_PER_INCH;
+        double bodyIndex = weightInKilograms/Math.pow(heightInMeters,2);
+        if (bodyIndex < 18.5){
+            System.out.println("your weight is under the norm and your BMI is: " + bodyIndex);
         }
-        System.out.println("pease enter the answer for " + number1 + " - " + number2);
-        int answer= input.nextInt();
-        if(number1 - number2 == answer)
-            System.out.println("you are right");
-        else System.out.println("you are wrong");
-
-
+           else if ((18.5 <= bodyIndex) & (bodyIndex <= 25.5) ){
+            System.out.println(" you have a normal weight and your BMI is " + bodyIndex);
+        }
+           else if ((bodyIndex > 25.5)&(bodyIndex<30.0)){
+            System.out.println("you are overweight and your BMI is " + bodyIndex);
+        }
+        else System.out.println("you are an obese");
     }
 }
