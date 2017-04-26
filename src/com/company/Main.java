@@ -212,31 +212,41 @@ public class Main {
 
 
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("please enter the year");
-        int year = input.nextInt();
-        int yourZodiac = year%12;
-        switch (yourZodiac){
-            case 0: System.out.println("monkey"); break;
-            case 1: System.out.println("rooster");break;
-            case 2: System.out.println("dog");break;
-            case 3: System.out.println("pig");break;
-            case 4: System.out.println("rat");break;
-            case 5: System.out.println("ox");break;
-            case 6: System.out.println("tiger");break;
-            case 7: System.out.println("rabbit");break;
-            case 8: System.out.println("dragon");break;
-            case 9: System.out.println("snake");break;
-            case 10: System.out.println("horse");break;
-            case 11: System.out.println("sheep");break;
-
-        }
-
+//
+//      Scanner input = new Scanner(System.in);
+//      int day = input.nextInt();
+//      switch (day){
+//          case 1: System.out.print("Monday"); break;
+//          case 2: System.out.print("Tuesday"); break;
+//          case 3: System.out.print("wednesday"); break;
+//          case 4: System.out.print("thursday"); break;
+//          case 5: System.out.print("friday"); break;
+//          case 6: System.out.print("saturday"); break;
+//          case 7: System.out.print("sunday"); break;}
+//
+       Scanner input = new Scanner(System.in);
+       System.out.print("please enter the values for a,b and c");
+       double a = input.nextDouble();
+       double b = input.nextDouble();
+       double c = input.nextDouble();
+       double discriminant = b*b-4*a*c;
+       double root1=(-b+Math.pow((discriminant),0.5))/2*a;
+       double root2 = (-b-Math.pow((discriminant),0.5))/2*a;
+       if (discriminant > 0){
+           System.out.println("equation has two roots:" + root1 +"and " + root2);
        }
+       else if (discriminant == 0){
+           System.out.println("equation has one roots:" + root1 );
+       }
+       else System.out.print("equation has nor roots");
 
-
-
+      }
     }
+
+
+
+
+
 
 
 
