@@ -188,30 +188,49 @@ public class Main {
 //        }
 
 
+//        Scanner input = new Scanner(System.in);
+//        int x = (int) (Math.random()*100);
+//        System.out.println("please enter thenumber");
+//        int y = input.nextInt();
+//        int digit1= x/10;
+//        int digit2=x%10;
+//        int guessDigit1= y/10;
+//        int guessDigit2 = y%10;
+//
+//        if (x == y){
+//            System.out.println("you won $10,000.");
+//        }
+//        else if (guessDigit2 == digit1 && guessDigit1 == digit2){
+//            System.out.println("You won $3000 ");
+//        }
+//        else if ((digit1 ==guessDigit1)||(digit2==guessDigit2)||(digit2==guessDigit1)||(digit2==guessDigit1)){
+//            System.out.println("you won $1,000.");
+//        }
+//
+//        else System.out.println("you lost");
+//        System.out.println(x);
+
+
+
         Scanner input = new Scanner(System.in);
-        int x = (int) (Math.random()*100);
-        System.out.println("please enter thenumber");
-        int y = input.nextInt();
-        int digit1= x/10;
-        int digit2=x%10;
-        int guessDigit1= y/10;
-        int guessDigit2 = y%10;
+        System.out.println("please enter the year");
+        int year = input.nextInt();
+        int yourZodiac = year%12;
+        switch (yourZodiac){
+            case 0: System.out.println("monkey"); break;
+            case 1: System.out.println("rooster");break;
+            case 2: System.out.println("dog");break;
+            case 3: System.out.println("pig");break;
+            case 4: System.out.println("rat");break;
+            case 5: System.out.println("ox");break;
+            case 6: System.out.println("tiger");break;
+            case 7: System.out.println("rabbit");break;
+            case 8: System.out.println("dragon");break;
+            case 9: System.out.println("snake");break;
+            case 10: System.out.println("horse");break;
+            case 11: System.out.println("sheep");break;
 
-        if (x == y){
-            System.out.println("you won $10,000.");
         }
-        else if (guessDigit2 == digit1 && guessDigit1 == digit2){
-            System.out.println("You won $3000 ");
-        }
-        else if ((digit1 ==guessDigit1)||(digit2==guessDigit2)||(digit2==guessDigit1)||(digit2==guessDigit1)){
-            System.out.println("you won $1,000.");
-        }
-
-        else System.out.println("you lost");
-        System.out.println(x);
-
-
-
 
        }
 
