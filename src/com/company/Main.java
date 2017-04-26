@@ -11,7 +11,6 @@ public class Main {
     public static void main(String[] args) {
 
 
-
 //        int number1 = (int)(System.currentTimeMillis() % 10);
 //        int number2 = (int)(System.currentTimeMillis() / 7 % 10);
 //        Scanner input = new Scanner(System.in);
@@ -211,7 +210,6 @@ public class Main {
 //        System.out.println(x);
 
 
-
 //
 //      Scanner input = new Scanner(System.in);
 //      int day = input.nextInt();
@@ -256,23 +254,74 @@ public class Main {
 //           System.out.println("you are right");
 //       }
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("please enter the numbers");
-        double a = input.nextDouble();
-        double b = input.nextDouble();
-        double c = input.nextDouble();
-        double d = input.nextDouble();
-        double e = input.nextDouble();
-        double f = input.nextDouble();
-        double x, y;
-        if (a*d - b*c != 0){
-           x = (e*d - b*f)/(a*d - b*c);
-           y = (a*f - e*c)/(a*d - b*c);
-        System.out.println(x + "and " +y + "are the roots");
-        }
-        else System.out.println("equation has no roots");
-      }
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("please enter the numbers");
+//        double a = input.nextDouble();
+//        double b = input.nextDouble();
+//        double c = input.nextDouble();
+//        double d = input.nextDouble();
+//        double e = input.nextDouble();
+//        double f = input.nextDouble();
+//        double x, y;
+//        if (a*d - b*c != 0){
+//           x = (e*d - b*f)/(a*d - b*c);
+//           y = (a*f - e*c)/(a*d - b*c);
+//        System.out.println(x + "and " +y + "are the roots");
+//        }
+//        else System.out.println("equation has no roots");
+
+        getRandomMonth();
     }
+
+    private static  String getRandomMonth() {
+        int x = (int) (Math.random() * 12);
+        String month = "";
+        switch (x) {
+            case 1:
+                month = "Jamuary";
+                break;
+            case 2:
+                month = "february";
+                break;
+            case 3:
+               month = "march";
+                break;
+            case 4:
+                month = "april";
+                break;
+            case 5:
+                month = "may";
+                break;
+            case 6:
+               month = "june";
+                break;
+            case 7:
+                month = "july";
+                break;
+            case 8:
+                month = "august";
+                break;
+            case 9:
+                month = "september";
+                break;
+            case 10:
+                month = "october";
+                break;
+            case 11:
+               month = "november";
+                break;
+            case 12:
+               month = "december";
+                break;}
+
+                System.out.println(month);
+    return month;
+    }
+
+
+        }
+
+
 
 
 
