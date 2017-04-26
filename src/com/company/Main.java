@@ -270,7 +270,30 @@ public class Main {
 //        }
 //        else System.out.println("equation has no roots");
 
-        getRandomMonth();
+       // getRandomMonth();
+
+        getTheDay();
+    }
+
+    private static void getTheDay() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("please enter the number for day");
+        int today = input.nextInt();
+        System.out.println("please enter the number for future day");
+        int futureDay = input.nextInt();
+        int x=(today + futureDay)%7;
+        String day = "";
+        switch (x){
+            case 0: day ="monday"; break;
+            case 1: day ="tuesday"; break;
+            case 2: day ="wednesday"; break;
+            case 3: day ="thursday"; break;
+            case 4: day ="friday"; break;
+            case 5: day ="saturday"; break;
+            case 6: day ="sunday"; break;
+
+        }
+        System.out.print(day);
     }
 
     private static  String getRandomMonth() {
@@ -316,6 +339,10 @@ public class Main {
 
                 System.out.println(month);
     return month;
+
+
+
+
     }
 
 
