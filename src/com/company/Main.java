@@ -273,6 +273,36 @@ public class Main {
         // getRandomMonth();
 
         //  getTheDay();
+       // getDollars();
+        Scanner input = new Scanner(System.in);
+        System.out.println(" please enter three numbers: ");
+        int i = input.nextInt();
+        int j = input.nextInt();
+        int k = input.nextInt();
+        if (i<j){
+            int temp;
+            temp = i;
+            i = j;
+            j = temp;
+        }
+        if (i < k){
+            int temp;
+            temp =i;
+            i=k;
+            k=temp;
+        }
+        if (j<k){
+            int temp;
+            temp = j;
+            j = k;
+            k = temp;
+        }
+        System.out.println(i +" " +j+" " +k);
+
+
+    }
+
+    private static void getDollars() {
         Scanner input = new Scanner(System.in);
         System.out.print("please enter the number");
         double amount = input.nextDouble();
@@ -315,13 +345,7 @@ public class Main {
 
 
         System.out.println(" " + numberOfPennies + " pennies");
-
     }
-
-
-
-
-
 
 
     private static void getTheDay() {
