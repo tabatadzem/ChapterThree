@@ -224,22 +224,53 @@ public class Main {
 //          case 6: System.out.print("saturday"); break;
 //          case 7: System.out.print("sunday"); break;}
 //
-       Scanner input = new Scanner(System.in);
-       System.out.print("please enter the values for a,b and c");
-       double a = input.nextDouble();
-       double b = input.nextDouble();
-       double c = input.nextDouble();
-       double discriminant = b*b-4*a*c;
-       double root1=(-b+Math.pow((discriminant),0.5))/2*a;
-       double root2 = (-b-Math.pow((discriminant),0.5))/2*a;
-       if (discriminant > 0){
-           System.out.println("equation has two roots:" + root1 +"and " + root2);
-       }
-       else if (discriminant == 0){
-           System.out.println("equation has one roots:" + root1 );
-       }
-       else System.out.print("equation has nor roots");
+//       Scanner input = new Scanner(System.in);
+//       System.out.print("please enter the values for a,b and c");
+//       double a = input.nextDouble();
+//       double b = input.nextDouble();
+//       double c = input.nextDouble();
+//       double discriminant = b*b-4*a*c;
+//       double root1=(-b+Math.pow((discriminant),0.5))/2*a;
+//       double root2 = (-b-Math.pow((discriminant),0.5))/2*a;
+//       if (discriminant > 0){
+//           System.out.println("equation has two roots:" + root1 +"and " + root2);
+//       }
+//       else if (discriminant == 0){
+//           System.out.println("equation has one roots:" + root1 );
+//       }
+//       else System.out.print("equation has nor roots");
 
+//       Scanner input = new Scanner(System.in);
+//       int x = (int) (Math.random()*1000);
+//       int y = (int) (Math.random()*1000);
+//
+//       if (x < y){
+//           int temp;
+//           temp = x ;
+//           x=y;
+//           y = temp;
+//       }
+//        System.out.println("type the answer for " + x +"-" +y);
+//           int answer = input.nextInt();
+//       if (x-y == answer){
+//           System.out.println("you are right");
+//       }
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("please enter the numbers");
+        double a = input.nextDouble();
+        double b = input.nextDouble();
+        double c = input.nextDouble();
+        double d = input.nextDouble();
+        double e = input.nextDouble();
+        double f = input.nextDouble();
+        double x, y;
+        if (a*d - b*c != 0){
+           x = (e*d - b*f)/(a*d - b*c);
+           y = (a*f - e*c)/(a*d - b*c);
+        System.out.println(x + "and " +y + "are the roots");
+        }
+        else System.out.println("equation has no roots");
       }
     }
 
