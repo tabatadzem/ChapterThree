@@ -425,24 +425,16 @@ public class Main {
 //            System.out.println("computer won");
 //        }
 
+//
         Scanner input = new Scanner(System.in);
-        System.out.print("please enter the weight");
-        double weight = input.nextDouble();
-        double cost;
-        if (weight <=1 ){
-            cost = 3.5;
-            System.out.println(cost);
-        }else if (weight > 1 && weight <= 3){
-            cost = 5.5;
-            System.out.println(cost);
-        }else if (weight > 3 && weight <= 10){
-            cost = 8.5;
-            System.out.println(cost);
-        }else if (weight > 10 && weight <= 20){
-            cost = 10.5;
-            System.out.println(cost);
-        }else System.out.println("package can not be shipped");
-
+        double edge1 = input.nextDouble();
+        double edge2 = input.nextDouble();
+        double edge3 = input.nextDouble();
+        double perimeter;
+        if(((edge1+edge2)>edge3)&&((edge1+edge3)>edge2)&&((edge2+edge3)>edge1)){
+            perimeter = edge1 + edge2 + edge3;
+            System.out.println(perimeter);
+        } else System.out.println("such triangular does not exist");
     }
     private static void getCoordinates() {
         int x = (int) (Math.random()*200);
