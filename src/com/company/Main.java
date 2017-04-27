@@ -313,42 +313,52 @@ public class Main {
 //        }
 //        else System.out.println("0"+digit +""+ digitTen);
 
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("please enter the month");
+//        int month = input.nextInt();
+//        System.out.println("please enter the year");
+//        int year = input.nextInt();
+//        if(year%4==1){
+//            switch (month){
+//                case 1: System.out.println("january has 31 days");break;
+//                case 2: System.out.println("february has 29 days");break;
+//                case 3: System.out.println("march has 31 days");break;
+//                case 4: System.out.println("April has 30 days");break;
+//                case 5: System.out.println("may has 31 days");break;
+//                case 6: System.out.println("june has 30 days");break;
+//                case 7: System.out.println("july has 31 days");break;
+//                case 8: System.out.println("august has 31 days");break;
+//                case 9: System.out.println("september has 30 days");break;
+//                case 10: System.out.println("october has 31 days");break;
+//                case 11: System.out.println("november has 30 days");break;
+//                case 12: System.out.println("december has 31 days");break;
+//            }
+//        } else if(year%4==0){ switch (month){
+//            case 1: System.out.println("january has 31 days");break;
+//            case 2: System.out.println("february has 28 days");break;
+//            case 3: System.out.println("march has 31 days");break;
+//            case 4: System.out.println("April has 30 days");break;
+//            case 5: System.out.println("may has 31 days");break;
+//            case 6: System.out.println("june has 30 days");break;
+//            case 7: System.out.println("july has 31 days");break;
+//            case 8: System.out.println("august has 31 days");break;
+//            case 9: System.out.println("september has 30 days");break;
+//            case 10: System.out.println("october has 31 days");break;
+//            case 11: System.out.println("november has 30 days");break;
+//            case 12: System.out.println("december has 31 days");break;
+//        }
+//
+//        }
         Scanner input = new Scanner(System.in);
-        System.out.println("please enter the month");
-        int month = input.nextInt();
-        System.out.println("please enter the year");
-        int year = input.nextInt();
-        if(year%4==1){
-            switch (month){
-                case 1: System.out.println("january has 31 days");break;
-                case 2: System.out.println("february has 29 days");break;
-                case 3: System.out.println("march has 31 days");break;
-                case 4: System.out.println("April has 30 days");break;
-                case 5: System.out.println("may has 31 days");break;
-                case 6: System.out.println("june has 30 days");break;
-                case 7: System.out.println("july has 31 days");break;
-                case 8: System.out.println("august has 31 days");break;
-                case 9: System.out.println("september has 30 days");break;
-                case 10: System.out.println("october has 31 days");break;
-                case 11: System.out.println("november has 30 days");break;
-                case 12: System.out.println("december has 31 days");break;
-            }
-        } else if(year%4==0){ switch (month){
-            case 1: System.out.println("january has 31 days");break;
-            case 2: System.out.println("february has 28 days");break;
-            case 3: System.out.println("march has 31 days");break;
-            case 4: System.out.println("April has 30 days");break;
-            case 5: System.out.println("may has 31 days");break;
-            case 6: System.out.println("june has 30 days");break;
-            case 7: System.out.println("july has 31 days");break;
-            case 8: System.out.println("august has 31 days");break;
-            case 9: System.out.println("september has 30 days");break;
-            case 10: System.out.println("october has 31 days");break;
-            case 11: System.out.println("november has 30 days");break;
-            case 12: System.out.println("december has 31 days");break;
-        }
+        System.out.println("please enter three digit number ");
+        int number = input.nextInt();
+        int digit1 = number / 100;
+        int digit3 = number%10;
+        if (digit1 == digit3){
+            System.out.println(number + "is a palindrome");
+        } else System.out.println(number + "is not a palindrome");
 
-        }
+
     }
 
     private static void getDollars() {
