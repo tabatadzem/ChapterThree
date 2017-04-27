@@ -274,30 +274,44 @@ public class Main {
 
         //  getTheDay();
        // getDollars();
+//        Scanner input = new Scanner(System.in);
+//        System.out.println(" please enter three numbers: ");
+//        int i = input.nextInt();
+//        int j = input.nextInt();
+//        int k = input.nextInt();
+//        if (i<j){
+//            int temp;
+//            temp = i;
+//            i = j;
+//            j = temp;
+//        }
+//        if (i < k){
+//            int temp;
+//            temp =i;
+//            i=k;
+//            k=temp;
+//        }
+//        if (j<k){
+//            int temp;
+//            temp = j;
+//            j = k;
+//            k = temp;
+//        }
+//        System.out.println(i +" " +j+" " +k);
+
         Scanner input = new Scanner(System.in);
-        System.out.println(" please enter three numbers: ");
-        int i = input.nextInt();
-        int j = input.nextInt();
-        int k = input.nextInt();
-        if (i<j){
-            int temp;
-            temp = i;
-            i = j;
-            j = temp;
+        System.out.println("please enter the 9 digit integer ");
+        int digit =  input.nextInt();
+        int  digitTen;
+        digitTen = (int) (( (digit/100000000) + ((digit/10000000)%10)*2
+                        + ((digit/1000000)%10)*3
+                                        +((digit/100000)%10)*4 + ((digit/10000)%10)*5
+                        + ((digit/1000)%10)*6
+                                        + ((digit/100)%10)*7 +((digit/10)%10)*8 + (digit%10)*9 )*0.11)%10;
+        if (digitTen ==10){
+            System.out.println("your number is "+ digit +"X");
         }
-        if (i < k){
-            int temp;
-            temp =i;
-            i=k;
-            k=temp;
-        }
-        if (j<k){
-            int temp;
-            temp = j;
-            j = k;
-            k = temp;
-        }
-        System.out.println(i +" " +j+" " +k);
+        else System.out.println("0"+digit +""+ digitTen);
 
 
     }
