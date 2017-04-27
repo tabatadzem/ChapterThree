@@ -273,7 +273,7 @@ public class Main {
         // getRandomMonth();
 
         //  getTheDay();
-       // getDollars();
+        // getDollars();
 //        Scanner input = new Scanner(System.in);
 //        System.out.println(" please enter three numbers: ");
 //        int i = input.nextInt();
@@ -366,7 +366,69 @@ public class Main {
 ////        } else System.out.println("you lost");
 
 
-        getLotteryNumber();
+//        getLotteryNumber();
+
+        // getCoordinates();
+
+        Scanner input = new Scanner(System.in);
+        int x = (int) (Math.random() * 3);
+        System.out.println("please enter the number");
+        int y = input.nextInt();
+        switch (x) {
+            case 0:
+                System.out.println("computer is scissor ");
+                break;
+            case 1:
+                System.out.println("computer is rock ");
+                break;
+            case 2:
+                System.out.println("computer is paper ");
+                break;
+        }
+        switch (y) {
+            case 0:
+                System.out.println("you are scissor ");
+                break;
+            case 1:
+                System.out.println("you are rock ");
+                break;
+            case 2:
+                System.out.println("you are paper ");
+                break;
+        }
+       if (x == y) {
+            System.out.println("it is a tie");
+        }
+//               if (x == 0 && y == 1 ){
+//            System.out.println("You won ");
+//        }
+//        if (x == 0 && y == 2) {
+//            System.out.println("computer  won ");
+//        }
+//        if (x == 1 && y == 0) {
+//            System.out.println("computer won ");
+//        }
+//        if (x == 1 && y == 2) {
+//            System.out.println("you  won ");
+//        }
+//        if (x == 2 && y == 0) {
+//            System.out.println("you won ");
+//        }
+//        if (x == 2 && y == 1) {
+//            System.out.println("computer won ");
+//        }
+
+        if((x>y)^(x == 1 && y == 2)){
+            System.out.println("you won");
+        }
+        if((y>x)^(y == 1 && x == 2)){
+            System.out.println("computer won");
+        }
+    }
+    private static void getCoordinates() {
+        int x = (int) (Math.random()*200);
+        int y = (int) (Math.random()*100);
+        System.out.println(x +" and "+ y);
     }
 
     private static void getLotteryNumber() {
