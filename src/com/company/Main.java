@@ -370,60 +370,79 @@ public class Main {
 
         // getCoordinates();
 
-        Scanner input = new Scanner(System.in);
-        int x = (int) (Math.random() * 3);
-        System.out.println("please enter the number");
-        int y = input.nextInt();
-        switch (x) {
-            case 0:
-                System.out.println("computer is scissor ");
-                break;
-            case 1:
-                System.out.println("computer is rock ");
-                break;
-            case 2:
-                System.out.println("computer is paper ");
-                break;
-        }
-        switch (y) {
-            case 0:
-                System.out.println("you are scissor ");
-                break;
-            case 1:
-                System.out.println("you are rock ");
-                break;
-            case 2:
-                System.out.println("you are paper ");
-                break;
-        }
-       if (x == y) {
-            System.out.println("it is a tie");
-        }
-//               if (x == 0 && y == 1 ){
-//            System.out.println("You won ");
+//        Scanner input = new Scanner(System.in);
+//        int x = (int) (Math.random() * 3);
+//        System.out.println("please enter the number");
+//        int y = input.nextInt();
+//        switch (x) {
+//            case 0:
+//                System.out.println("computer is scissor ");
+//                break;
+//            case 1:
+//                System.out.println("computer is rock ");
+//                break;
+//            case 2:
+//                System.out.println("computer is paper ");
+//                break;
 //        }
-//        if (x == 0 && y == 2) {
-//            System.out.println("computer  won ");
+//        switch (y) {
+//            case 0:
+//                System.out.println("you are scissor ");
+//                break;
+//            case 1:
+//                System.out.println("you are rock ");
+//                break;
+//            case 2:
+//                System.out.println("you are paper ");
+//                break;
 //        }
-//        if (x == 1 && y == 0) {
-//            System.out.println("computer won ");
+//       if (x == y) {
+//            System.out.println("it is a tie");
 //        }
-//        if (x == 1 && y == 2) {
-//            System.out.println("you  won ");
+////               if (x == 0 && y == 1 ){
+////            System.out.println("You won ");
+////        }
+////        if (x == 0 && y == 2) {
+////            System.out.println("computer  won ");
+////        }
+////        if (x == 1 && y == 0) {
+////            System.out.println("computer won ");
+////        }
+////        if (x == 1 && y == 2) {
+////            System.out.println("you  won ");
+////        }
+////        if (x == 2 && y == 0) {
+////            System.out.println("you won ");
+////        }
+////        if (x == 2 && y == 1) {
+////            System.out.println("computer won ");
+////        }
+//
+//        if((x>y)^(x == 1 && y == 2)){
+//            System.out.println("you won");
 //        }
-//        if (x == 2 && y == 0) {
-//            System.out.println("you won ");
-//        }
-//        if (x == 2 && y == 1) {
-//            System.out.println("computer won ");
+//        if((y>x)^(y == 1 && x == 2)){
+//            System.out.println("computer won");
 //        }
 
-        if((x>y)^(x == 1 && y == 2)){
-            System.out.println("you won");
-        }
-        if((y>x)^(y == 1 && x == 2)){
-            System.out.println("computer won");
-        }
+        Scanner input = new Scanner(System.in);
+        System.out.print("please enter the weight");
+        double weight = input.nextDouble();
+        double cost;
+        if (weight <=1 ){
+            cost = 3.5;
+            System.out.println(cost);
+        }else if (weight > 1 && weight <= 3){
+            cost = 5.5;
+            System.out.println(cost);
+        }else if (weight > 3 && weight <= 10){
+            cost = 8.5;
+            System.out.println(cost);
+        }else if (weight > 10 && weight <= 20){
+            cost = 10.5;
+            System.out.println(cost);
+        }else System.out.println("package can not be shipped");
+
     }
     private static void getCoordinates() {
         int x = (int) (Math.random()*200);
