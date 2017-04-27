@@ -299,21 +299,56 @@ public class Main {
 //        }
 //        System.out.println(i +" " +j+" " +k);
 
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("please enter the 9 digit integer ");
+//        int digit =  input.nextInt();
+//        int  digitTen;
+//        digitTen = (int) (( (digit/100000000) + ((digit/10000000)%10)*2
+//                        + ((digit/1000000)%10)*3
+//                                        +((digit/100000)%10)*4 + ((digit/10000)%10)*5
+//                        + ((digit/1000)%10)*6
+//                                        + ((digit/100)%10)*7 +((digit/10)%10)*8 + (digit%10)*9 )*0.11)%10;
+//        if (digitTen ==10){
+//            System.out.println("your number is "+ digit +"X");
+//        }
+//        else System.out.println("0"+digit +""+ digitTen);
+
         Scanner input = new Scanner(System.in);
-        System.out.println("please enter the 9 digit integer ");
-        int digit =  input.nextInt();
-        int  digitTen;
-        digitTen = (int) (( (digit/100000000) + ((digit/10000000)%10)*2
-                        + ((digit/1000000)%10)*3
-                                        +((digit/100000)%10)*4 + ((digit/10000)%10)*5
-                        + ((digit/1000)%10)*6
-                                        + ((digit/100)%10)*7 +((digit/10)%10)*8 + (digit%10)*9 )*0.11)%10;
-        if (digitTen ==10){
-            System.out.println("your number is "+ digit +"X");
+        System.out.println("please enter the month");
+        int month = input.nextInt();
+        System.out.println("please enter the year");
+        int year = input.nextInt();
+        if(year%4==1){
+            switch (month){
+                case 1: System.out.println("january has 31 days");break;
+                case 2: System.out.println("february has 29 days");break;
+                case 3: System.out.println("march has 31 days");break;
+                case 4: System.out.println("April has 30 days");break;
+                case 5: System.out.println("may has 31 days");break;
+                case 6: System.out.println("june has 30 days");break;
+                case 7: System.out.println("july has 31 days");break;
+                case 8: System.out.println("august has 31 days");break;
+                case 9: System.out.println("september has 30 days");break;
+                case 10: System.out.println("october has 31 days");break;
+                case 11: System.out.println("november has 30 days");break;
+                case 12: System.out.println("december has 31 days");break;
+            }
+        } else if(year%4==0){ switch (month){
+            case 1: System.out.println("january has 31 days");break;
+            case 2: System.out.println("february has 28 days");break;
+            case 3: System.out.println("march has 31 days");break;
+            case 4: System.out.println("April has 30 days");break;
+            case 5: System.out.println("may has 31 days");break;
+            case 6: System.out.println("june has 30 days");break;
+            case 7: System.out.println("july has 31 days");break;
+            case 8: System.out.println("august has 31 days");break;
+            case 9: System.out.println("september has 30 days");break;
+            case 10: System.out.println("october has 31 days");break;
+            case 11: System.out.println("november has 30 days");break;
+            case 12: System.out.println("december has 31 days");break;
         }
-        else System.out.println("0"+digit +""+ digitTen);
 
-
+        }
     }
 
     private static void getDollars() {
