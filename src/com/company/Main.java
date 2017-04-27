@@ -349,16 +349,45 @@ public class Main {
 //        }
 //
 //        }
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("please enter three digit number ");
+//        int number = input.nextInt();
+//        int digit1 = number / 100;
+//        int digit3 = number%10;
+//        if (digit1 == digit3){
+//            System.out.println(number + "is a palindrome");
+//        } else System.out.println(number + "is not a palindrome");
+//        Scanner input = new Scanner(System.in);
+////        int coin = (int) (Math.random()*2);
+////        System.out.println("please enter your answer, 0 or 1");
+////        int answer= input.nextInt();
+////        if ((answer==coin)){
+////            System.out.println("you won");
+////        } else System.out.println("you lost");
+
+
+        getLotteryNumber();
+    }
+
+    private static void getLotteryNumber() {
         Scanner input = new Scanner(System.in);
-        System.out.println("please enter three digit number ");
-        int number = input.nextInt();
-        int digit1 = number / 100;
-        int digit3 = number%10;
-        if (digit1 == digit3){
-            System.out.println(number + "is a palindrome");
-        } else System.out.println(number + "is not a palindrome");
-
-
+        int lotteryNumber = (int) (Math.random()*1000);
+        System.out.println("please enter the 3 digit number");
+        int playersNumber = input.nextInt();
+        int x1 = lotteryNumber/100;
+        int x2 = (lotteryNumber/10)%10;
+        int x3 = lotteryNumber^10;
+        int y1 = playersNumber/100;
+        int y2 = (playersNumber/10)%10;
+        int y3 = playersNumber%10;
+        if(playersNumber == lotteryNumber){
+            System.out.println("you won $10000");
+        }else if(((x1==y1)||(x1==y2)||(x1==y3))&&((x2==y2)||(x2==y3))&&((x3==y2)||(x3==y3)))
+        {
+            System.out.println("you won $3000");
+        }else if (((x1==y1)||(x1==y2)||(x1==y3))||((x2==y2)||(x2 == y3))||((x3==y2)||(x3==y3))){
+            System.out.println("you won $1000");
+        } else System.out.println("sorry you lost numbers are "+ lotteryNumber);
     }
 
     private static void getDollars() {
