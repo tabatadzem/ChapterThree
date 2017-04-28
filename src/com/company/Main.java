@@ -541,29 +541,44 @@ public class Main {
 //        }else System.out.print("point doesn't belong to the triangle");
 
 
+//
+//                Scanner input = new Scanner(System.in);
+//                System.out.println("please enter the center coordinates for first rectangle ");
+//                double x1 = input.nextDouble();
+//                double y1 = input.nextDouble();
+//                double width1 = input.nextDouble();
+//                double height1 = input.nextDouble();
+//                System.out.println("please enter the center coordinates for first rectangle ");
+//                double x2 = input.nextDouble();
+//                double y2 = input.nextDouble();
+//                double width2 = input.nextDouble();
+//                double height2 = input.nextDouble();
+//                double edgeX =x2 - width2/2;
+//                double edgeY = y2 - height2/2;
+//                if (Math.abs(x2-x1)<=width1/2&&Math.abs(y2-y1)<=height2&&Math.abs(x1 - edgeX)
+//                        <=width1/2&&Math.abs(y1-edgeY)<=height1/2){
+//                   System.out.println("second rectangle is in first one");
+//
+//                } else  if (Math.abs(x2-x1)<=width1/2&&Math.abs(y2-y1)<=height2&&Math.abs(x1 - edgeX)
+//                        >=width1/2&&Math.abs(y1-edgeY)>=height1/2){
+//                    System.out.println("second rectangle overlaps "); }
+//                    else  System.out.println("it doesn't overlap ");
 
-                Scanner input = new Scanner(System.in);
-                System.out.println("please enter the center coordinates for first rectangle ");
-                double x1 = input.nextDouble();
-                double y1 = input.nextDouble();
-                double width1 = input.nextDouble();
-                double height1 = input.nextDouble();
-                System.out.println("please enter the center coordinates for first rectangle ");
-                double x2 = input.nextDouble();
-                double y2 = input.nextDouble();
-                double width2 = input.nextDouble();
-                double height2 = input.nextDouble();
-                double edgeX =x2 - width2/2;
-                double edgeY = y2 - height2/2;
-                if (Math.abs(x2-x1)<=width1/2&&Math.abs(y2-y1)<=height2&&Math.abs(x1 - edgeX)
-                        <=width1/2&&Math.abs(y1-edgeY)<=height1/2){
-                   System.out.println("second rectangle is in first one");
-
-                } else  if (Math.abs(x2-x1)<=width1/2&&Math.abs(y2-y1)<=height2&&Math.abs(x1 - edgeX)
-                        >=width1/2&&Math.abs(y1-edgeY)>=height1/2){
-                    System.out.println("second rectangle overlaps "); }
-                    else  System.out.println("it doesn't overlap ");
-
+        Scanner input = new Scanner(System.in);
+        System.out.println("please enter the coordinates for center and radius foe first circle");
+        double x1 = input.nextDouble();
+        double y1 = input.nextDouble();
+        double radius1 = input.nextDouble();
+        System.out.println("please enter the coordinates for center and radius foe first circle");
+        double x2 = input.nextDouble();
+        double y2 = input.nextDouble();
+        double radius2 = input.nextDouble();
+        double distance = Math.pow((Math.pow(x2-x1,2)+Math.pow(y2-y1,2)),0.5);
+        if (distance <= Math.abs(radius2 - radius1) ){
+            System.out.println("second circle is inside the first circle");
+        } else if (distance <= radius1+radius2){
+            System.out.println("circles are intersecting");
+        } else System.out.println("circles don't touch");
 
 
 
