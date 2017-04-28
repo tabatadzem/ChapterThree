@@ -500,36 +500,73 @@ public class Main {
 //          }
 //          System.out.println("your card is " + face +" of " + suit);
 
-            Scanner input = new Scanner(System.in);
-            System.out.println("please enter the coordinates for first line");
-            System.out.print("x1");
-            double x1 = input.nextDouble();
-            System.out.print("y1");
-            double y1 = input.nextDouble();
-            System.out.print("x2");
-            double x2 = input.nextDouble();
-            System.out.print("y2");
-            double y2 = input.nextDouble();
-            System.out.print("please enter the coordinates for second line ");
-            System.out.print("x1");
-            double x3 = input.nextDouble();
-            System.out.print("y1");
-            double y3 = input.nextDouble();
-            System.out.print("x2");
-            double x4 = input.nextDouble();
-            System.out.print("y2");
-            double y4 = input.nextDouble();
-            double a = y1 - y2;
-            double b = x1 -x2;
-            double c= (y1 -y2)*x1 - (x1-x2)*x2;
-            double d = y3 - y4;
-            double e = x3 - x4;
-            double f= (y3 -y4)*x3 - (x3-x4)*x4;
-            double x = (e*d - b*f) / (a*d - b*c);
-            double y = (a*f - e*c) / (a*d - b*c);
-            if (!(a*d - b*c ==0)){
-                System.out.println(" two lines intersect in the point " + x + " and " + y);
-            } else System.out.println("this two lines are parallel");
+//            Scanner input = new Scanner(System.in);
+//            System.out.println("please enter the coordinates for first line");
+//            System.out.print("x1");
+//            double x1 = input.nextDouble();
+//            System.out.print("y1");
+//            double y1 = input.nextDouble();
+//            System.out.print("x2");
+//            double x2 = input.nextDouble();
+//            System.out.print("y2");
+//            double y2 = input.nextDouble();
+//            System.out.print("please enter the coordinates for second line ");
+//            System.out.print("x1");
+//            double x3 = input.nextDouble();
+//            System.out.print("y1");
+//            double y3 = input.nextDouble();
+//            System.out.print("x2");
+//            double x4 = input.nextDouble();
+//            System.out.print("y2");
+//            double y4 = input.nextDouble();
+//            double a = y1 - y2;
+//            double b = x1 -x2;
+//            double c= (y1 -y2)*x1 - (x1-x2)*x2;
+//            double d = y3 - y4;
+//            double e = x3 - x4;
+//            double f= (y3 -y4)*x3 - (x3-x4)*x4;
+//            double x = (e*d - b*f) / (a*d - b*c);
+//            double y = (a*f - e*c) / (a*d - b*c);
+//            if (!(a*d - b*c ==0)){
+//                System.out.println(" two lines intersect in the point " + x + " and " + y);
+//            } else System.out.println("this two lines are parallel");
+
+
+//        Scanner input = new Scanner(System.in);
+//        double coordinate1 = input.nextDouble();
+//        double coordinate2 = input.nextDouble();
+//        double distance = Math.pow((Math.pow(coordinate1,2)+Math.pow(coordinate2,2)),0.5);
+//        if (distance<=178){
+//            System.out.println("the point belongs to the triangle");
+//        }else System.out.print("point doesn't belong to the triangle");
+
+
+
+                Scanner input = new Scanner(System.in);
+                System.out.println("please enter the center coordinates for first rectangle ");
+                double x1 = input.nextDouble();
+                double y1 = input.nextDouble();
+                double width1 = input.nextDouble();
+                double height1 = input.nextDouble();
+                System.out.println("please enter the center coordinates for first rectangle ");
+                double x2 = input.nextDouble();
+                double y2 = input.nextDouble();
+                double width2 = input.nextDouble();
+                double height2 = input.nextDouble();
+                double edgeX =x2 - width2/2;
+                double edgeY = y2 - height2/2;
+                if (Math.abs(x2-x1)<=width1/2&&Math.abs(y2-y1)<=height2&&Math.abs(x1 - edgeX)
+                        <=width1/2&&Math.abs(y1-edgeY)<=height1/2){
+                   System.out.println("second rectangle is in first one");
+
+                } else  if (Math.abs(x2-x1)<=width1/2&&Math.abs(y2-y1)<=height2&&Math.abs(x1 - edgeX)
+                        >=width1/2&&Math.abs(y1-edgeY)>=height1/2){
+                    System.out.println("second rectangle overlaps "); }
+                    else  System.out.println("it doesn't overlap ");
+
+
+
+
 
 
      }
