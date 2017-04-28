@@ -1,7 +1,4 @@
 package com.company;
-import org.junit.runner.JUnitCore;
-import org.junit.runner.Result;
-import org.junit.runner.notification.Failure;
 
 
 import java.util.Scanner;
@@ -425,17 +422,91 @@ public class Main {
 //            System.out.println("computer won");
 //        }
 
+////
+//        Scanner input = new Scanner(System.in);
+//        double edge1 = input.nextDouble();
+//        double edge2 = input.nextDouble();
+//        double edge3 = input.nextDouble();
+//        double perimeter;
+//        if(((edge1+edge2)>edge3)&&((edge1+edge3)>edge2)&&((edge2+edge3)>edge1)){
+//            perimeter = edge1 + edge2 + edge3;
+//            System.out.println(perimeter);
+//        } else System.out.println("such triangular does not exist");
+//       Scanner input = new Scanner(System.in);
+//       System.out.println("please enter the year");
+//       int year = input.nextInt();
+//       System.out.println("please enter the month");
+//       int month = input.nextInt();
+//       System.out.println("please enter the day of the month");
+//       int dayOfMonth = input.nextInt();
+//       int century;
+//       int yearOfTheCentury;
+//       int dayOfTheWeek;
+//       if (month == 1 ){
+//           month = 13;
+//           year = year -1;
+//       }
+//       if (month == 2){
+//           month = 14;
+//           year = year -1;
+//       }
+//       century = year/100+1;
+//       yearOfTheCentury = year%100;
+//       dayOfTheWeek = (int) ((dayOfMonth + 26*(month + 1)/10 + yearOfTheCentury + yearOfTheCentury/4 +
+//                     century/4 + 5 * century)*0.07)/10;
+//       switch (dayOfTheWeek){
+//           case 2: System.out.println("it is monday"); break;
+//           case 3: System.out.println("it is tuesday"); break;
+//           case 4: System.out.println("it is wednesday"); break;
+//           case 5: System.out.println("it is thursday"); break;
+//           case 6: System.out.println("it is friday"); break;
+//           case 0: System.out.println("it is saturday"); break;
+//           case 1: System.out.println("it is sunday"); break; }
 //
-        Scanner input = new Scanner(System.in);
-        double edge1 = input.nextDouble();
-        double edge2 = input.nextDouble();
-        double edge3 = input.nextDouble();
-        double perimeter;
-        if(((edge1+edge2)>edge3)&&((edge1+edge3)>edge2)&&((edge2+edge3)>edge1)){
-            perimeter = edge1 + edge2 + edge3;
-            System.out.println(perimeter);
-        } else System.out.println("such triangular does not exist");
-    }
+//             Scanner input = new Scanner(System.in);
+//             System.out.println("please enter the coordinates");
+//             double x = input.nextDouble();
+//             double y = input.nextDouble();
+//             if (x < 10.0/2 && y < 5.0/2){
+//                 System.out.println("coordinates "+x +" and " +y +"are in the rectangle");
+//             } else System.out.println("coordinates "+x +" and " +y +"are not in the rectangle");
+
+          int card = (int) (Math.random()*53);
+          int suitValue = card /13;
+          int faceValue = card /4;
+          String face = "";
+          String suit = "";
+          switch(faceValue){
+              case 0: face = "ace"; break;
+              case 1: face = "2"; break;
+              case 2: face = "3"; break;
+              case 3: face = "4";break;
+              case 4: face = "5"; break;
+              case 5: face = "6"; break;
+              case 6: face = "7"; break;
+              case 7: face = "8"; break;
+              case 8: face = "9"; break;
+              case 9: face = "10"; break;
+              case 10: face = "jack"; break;
+              case 11: face = "queen"; break;
+              case 12: face = "king"; break;
+          }
+          switch (suitValue){
+              case 0: suit = "spades"; break;
+              case 1: suit = "diamond"; break;
+              case 2: suit = "club"; break;
+              case 3: suit = "heart"; break;
+
+          }
+          System.out.println("your card is " + face +" of " + suit);
+          }
+
+
+
+
+
+
+
     private static void getCoordinates() {
         int x = (int) (Math.random()*200);
         int y = (int) (Math.random()*100);
