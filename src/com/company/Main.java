@@ -471,35 +471,68 @@ public class Main {
 //                 System.out.println("coordinates "+x +" and " +y +"are in the rectangle");
 //             } else System.out.println("coordinates "+x +" and " +y +"are not in the rectangle");
 
-          int card = (int) (Math.random()*53);
-          int suitValue = card /13;
-          int faceValue = card /4;
-          String face = "";
-          String suit = "";
-          switch(faceValue){
-              case 0: face = "ace"; break;
-              case 1: face = "2"; break;
-              case 2: face = "3"; break;
-              case 3: face = "4";break;
-              case 4: face = "5"; break;
-              case 5: face = "6"; break;
-              case 6: face = "7"; break;
-              case 7: face = "8"; break;
-              case 8: face = "9"; break;
-              case 9: face = "10"; break;
-              case 10: face = "jack"; break;
-              case 11: face = "queen"; break;
-              case 12: face = "king"; break;
-          }
-          switch (suitValue){
-              case 0: suit = "spades"; break;
-              case 1: suit = "diamond"; break;
-              case 2: suit = "club"; break;
-              case 3: suit = "heart"; break;
+//          int card = (int) (Math.random()*53);
+//          int suitValue = card /13;
+//          int faceValue = card /4;
+//          String face = "";
+//          String suit = "";
+//          switch(faceValue){
+//              case 0: face = "ace"; break;
+//              case 1: face = "2"; break;
+//              case 2: face = "3"; break;
+//              case 3: face = "4";break;
+//              case 4: face = "5"; break;
+//              case 5: face = "6"; break;
+//              case 6: face = "7"; break;
+//              case 7: face = "8"; break;
+//              case 8: face = "9"; break;
+//              case 9: face = "10"; break;
+//              case 10: face = "jack"; break;
+//              case 11: face = "queen"; break;
+//              case 12: face = "king"; break;
+//          }
+//          switch (suitValue){
+//              case 0: suit = "spades"; break;
+//              case 1: suit = "diamond"; break;
+//              case 2: suit = "club"; break;
+//              case 3: suit = "heart"; break;
+//
+//          }
+//          System.out.println("your card is " + face +" of " + suit);
 
-          }
-          System.out.println("your card is " + face +" of " + suit);
-          }
+            Scanner input = new Scanner(System.in);
+            System.out.println("please enter the coordinates for first line");
+            System.out.print("x1");
+            double x1 = input.nextDouble();
+            System.out.print("y1");
+            double y1 = input.nextDouble();
+            System.out.print("x2");
+            double x2 = input.nextDouble();
+            System.out.print("y2");
+            double y2 = input.nextDouble();
+            System.out.print("please enter the coordinates for second line ");
+            System.out.print("x1");
+            double x3 = input.nextDouble();
+            System.out.print("y1");
+            double y3 = input.nextDouble();
+            System.out.print("x2");
+            double x4 = input.nextDouble();
+            System.out.print("y2");
+            double y4 = input.nextDouble();
+            double a = y1 - y2;
+            double b = x1 -x2;
+            double c= (y1 -y2)*x1 - (x1-x2)*x2;
+            double d = y3 - y4;
+            double e = x3 - x4;
+            double f= (y3 -y4)*x3 - (x3-x4)*x4;
+            double x = (e*d - b*f) / (a*d - b*c);
+            double y = (a*f - e*c) / (a*d - b*c);
+            if (!(a*d - b*c ==0)){
+                System.out.println(" two lines intersect in the point " + x + " and " + y);
+            } else System.out.println("this two lines are parallel");
+
+
+     }
 
 
 
