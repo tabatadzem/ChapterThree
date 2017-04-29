@@ -625,19 +625,37 @@ public class Main {
 //        }else if (point>0){
 //            System.out.println("p2 is in left side from the line");
 //        }else System.out.println("p2 belongs to the line");
-            Scanner input = new Scanner(System.in);
-            System.out.println("enter the weight and price for first");
-            double weight1 = input.nextDouble();
-            double cost1  = input.nextDouble();
-            System.out.println("enter the weight and price for second");
-            double weight2 = input.nextDouble();
-            double cost2  = input.nextDouble();
-            double costPerkilo1 = cost1/weight1;
-            double costPerkilo2 = cost2/weight2;
-            if (costPerkilo1<costPerkilo2){
-                System.out.println("first is better");
-            } else System.out.println("second is better");
+//            Scanner input = new Scanner(System.in);
+//            System.out.println("enter the weight and price for first");
+//            double weight1 = input.nextDouble();
+//            double cost1  = input.nextDouble();
+//            System.out.println("enter the weight and price for second");
+//            double weight2 = input.nextDouble();
+//            double cost2  = input.nextDouble();
+//            double costPerkillo1 = cost1/weight1;
+//            double costPerkillo2 = cost2/weight2;
+//            if (costPerkillo1<costPerkillo2){
+//                System.out.println("first is better");
+//            } else System.out.println("second is better");
 
+        Scanner input = new Scanner(System.in);
+        System.out.println("please enter coordinates for first point p0");
+        double x0 = input.nextDouble();
+        double y0 = input.nextDouble();
+        System.out.println("please enter coordinates for first point p1");
+        double x1 = input.nextDouble();
+        double y1 = input.nextDouble();
+        System.out.println("please enter coordinates for first point p2");
+        double x2 = input.nextDouble();
+        double y2= input.nextDouble();
+        double point = (x1 - x0)*(y2 - y0) - (x2 - x0)*(y1 - y0);
+        if (point == 0 &&((x0>x1&&y0>y1)&&(x0<x2&&y0<y2))){
+            System.out.println("the point is in the segment");
+
+        }else if(point == 0 ){
+            System.out.println("the point is on the line but not in in the segment");
+        }else {
+            System.out.println("the point is not on the line");}
 
 
 
