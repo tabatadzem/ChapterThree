@@ -564,21 +564,36 @@ public class Main {
 //                    System.out.println("second rectangle overlaps "); }
 //                    else  System.out.println("it doesn't overlap ");
 
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("please enter the coordinates for center and radius foe first circle");
+//        double x1 = input.nextDouble();
+//        double y1 = input.nextDouble();
+//        double radius1 = input.nextDouble();
+//        System.out.println("please enter the coordinates for center and radius foe first circle");
+//        double x2 = input.nextDouble();
+//        double y2 = input.nextDouble();
+//        double radius2 = input.nextDouble();
+//        double distance = Math.pow((Math.pow(x2-x1,2)+Math.pow(y2-y1,2)),0.5);
+//        if (distance <= Math.abs(radius2 - radius1) ){
+//            System.out.println("second circle is inside the first circle");
+//        } else if (distance <= radius1+radius2){
+//            System.out.println("circles are intersecting");
+//        } else System.out.println("circles don't touch");
         Scanner input = new Scanner(System.in);
-        System.out.println("please enter the coordinates for center and radius foe first circle");
-        double x1 = input.nextDouble();
-        double y1 = input.nextDouble();
-        double radius1 = input.nextDouble();
-        System.out.println("please enter the coordinates for center and radius foe first circle");
-        double x2 = input.nextDouble();
-        double y2 = input.nextDouble();
-        double radius2 = input.nextDouble();
-        double distance = Math.pow((Math.pow(x2-x1,2)+Math.pow(y2-y1,2)),0.5);
-        if (distance <= Math.abs(radius2 - radius1) ){
-            System.out.println("second circle is inside the first circle");
-        } else if (distance <= radius1+radius2){
-            System.out.println("circles are intersecting");
-        } else System.out.println("circles don't touch");
+        System.out.println("please enter GMT");
+        int timeZone = input.nextInt();
+        long totalMilliSeconds = System.currentTimeMillis();
+        long totalSeconds = totalMilliSeconds/1000;
+        long currentSecond = totalSeconds%60;
+        long totalMinutes =  totalSeconds/60;
+        long currentMinute = totalMinutes%60;
+        long totalHours = totalMinutes/60;
+        long currentHour = totalHours%24;
+        long timeZoneHour = currentHour + timeZone;
+        if (timeZoneHour>12 && timeZoneHour <=24){
+            timeZoneHour = timeZoneHour-12;
+            System.out.println("it is "  + timeZoneHour+":"+currentMinute+":"+ currentSecond);
+        } else  System.out.println("it is "  + (currentHour + timeZone)+":"+currentMinute+":"+ currentSecond);
 
 
 
