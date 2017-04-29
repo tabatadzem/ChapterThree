@@ -579,27 +579,39 @@ public class Main {
 //        } else if (distance <= radius1+radius2){
 //            System.out.println("circles are intersecting");
 //        } else System.out.println("circles don't touch");
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("please enter GMT");
+//        int timeZone = input.nextInt();
+//        long totalMilliSeconds = System.currentTimeMillis();
+//        long totalSeconds = totalMilliSeconds/1000;
+//        long currentSecond = totalSeconds%60;
+//        long totalMinutes =  totalSeconds/60;
+//        long currentMinute = totalMinutes%60;
+//        long totalHours = totalMinutes/60;
+//        long currentHour = totalHours%24;
+//        long timeZoneHour = currentHour + timeZone;
+//        if (timeZoneHour>12 && timeZoneHour <=24){
+//            timeZoneHour = timeZoneHour-12;
+//            System.out.println("it is "  + timeZoneHour+":"+currentMinute+":"+ currentSecond);
+//        } else  System.out.println("it is "  + (currentHour + timeZone)+":"+currentMinute+":"+ currentSecond);
+
         Scanner input = new Scanner(System.in);
-        System.out.println("please enter GMT");
-        int timeZone = input.nextInt();
-        long totalMilliSeconds = System.currentTimeMillis();
-        long totalSeconds = totalMilliSeconds/1000;
-        long currentSecond = totalSeconds%60;
-        long totalMinutes =  totalSeconds/60;
-        long currentMinute = totalMinutes%60;
-        long totalHours = totalMinutes/60;
-        long currentHour = totalHours%24;
-        long timeZoneHour = currentHour + timeZone;
-        if (timeZoneHour>12 && timeZoneHour <=24){
-            timeZoneHour = timeZoneHour-12;
-            System.out.println("it is "  + timeZoneHour+":"+currentMinute+":"+ currentSecond);
-        } else  System.out.println("it is "  + (currentHour + timeZone)+":"+currentMinute+":"+ currentSecond);
+        System.out.println("please enter 0 to convert from U.S dollar to Chinese RMB and 1 to convert from Chinese RMB to Us dollar");
+        int country = input.nextInt();
+        System.out.println("please enter amount");
+        double amount = input.nextDouble();
+        double currentAmount;
+        if (country == 0) {
+            currentAmount = amount * 6.89;
+            System.out.println(amount + "is " + currentAmount);
+        } else if (country == 1) {
+            currentAmount = amount * 0.15;
+            System.out.println(amount + "is " + currentAmount);
+        }
+
+    }
 
 
-
-
-
-     }
 
 
 
