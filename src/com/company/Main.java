@@ -595,20 +595,36 @@ public class Main {
 //            System.out.println("it is "  + timeZoneHour+":"+currentMinute+":"+ currentSecond);
 //        } else  System.out.println("it is "  + (currentHour + timeZone)+":"+currentMinute+":"+ currentSecond);
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("please enter 0 to convert from U.S dollar to Chinese RMB and 1 to convert from Chinese RMB to Us dollar");
-        int country = input.nextInt();
-        System.out.println("please enter amount");
-        double amount = input.nextDouble();
-        double currentAmount;
-        if (country == 0) {
-            currentAmount = amount * 6.89;
-            System.out.println(amount + "is " + currentAmount);
-        } else if (country == 1) {
-            currentAmount = amount * 0.15;
-            System.out.println(amount + "is " + currentAmount);
-        }
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("please enter 0 to convert from U.S dollar to Chinese RMB and 1 to convert from Chinese RMB to Us dollar");
+//        int country = input.nextInt();
+//        System.out.println("please enter amount");
+//        double amount = input.nextDouble();
+//        double currentAmount;
+//        if (country == 0) {
+//            currentAmount = amount * 6.89;
+//            System.out.println(amount + "is " + currentAmount);
+//        } else if (country == 1) {
+//            currentAmount = amount * 0.15;
+//            System.out.println(amount + "is " + currentAmount);
+//        }
 
+        Scanner input = new Scanner(System.in);
+        System.out.println("please enter coordinates for first point p0");
+        double x0 = input.nextDouble();
+        double y0 = input.nextDouble();
+        System.out.println("please enter coordinates for first point p1");
+        double x1 = input.nextDouble();
+        double y1 = input.nextDouble();
+        System.out.println("please enter coordinates for first point p2");
+        double x2 = input.nextDouble();
+        double y2= input.nextDouble();
+        double point = (x1 - x0)*(y2 - y0) - (x2 - x0)*(y1 - y0);
+        if ( point < 0){
+            System.out.println("p2 is on the right side from the line");
+        }else if (point>0){
+            System.out.println("p2 is in left side from the line");
+        }else System.out.println("p2 belongs to the line");
     }
 
 
